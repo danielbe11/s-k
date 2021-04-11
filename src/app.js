@@ -33,8 +33,10 @@ app.get('*', (req, res) => { res.render('404', {
     name: '', errorMessage: 'Page not found.'
     }) })
 
-// Choose port to listen on (3000)
+// Choose port to listen on.
+
+const port = process.env.PORT || 3000
 app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+    console.log('Server is up on port ' + port)
     })
 
